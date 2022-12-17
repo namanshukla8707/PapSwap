@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "153189027554",
+    "project_id": "papswap-791f0",
+    "storage_bucket": "papswap-791f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153189027554:android:38e968c27a2efb670f58bb",
+        "android_client_info": {
+          "package_name": "com.example.papswap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153189027554-5358f3g6a5r0j2s4bm2o678tfefql87f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClTpi8zZrDZubQQPv_9r6ixPCxOMdMiKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153189027554-5358f3g6a5r0j2s4bm2o678tfefql87f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
