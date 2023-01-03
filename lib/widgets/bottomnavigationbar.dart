@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:papswap/question_page.dart';
 import 'package:papswap/widgets/feed.dart';
 import 'package:papswap/widgets/homepage.dart';
 import 'package:papswap/widgets/profile.dart';
@@ -31,6 +32,7 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
   int currentIndex1 = 0;
   final screens = [
     FeedPage(),
+    // QuestionPage(),
     HomePage(),
     WalletPage(),
     ProfilePage(),
