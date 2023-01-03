@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:papswap/widgets/feed.dart';
 import 'package:papswap/widgets/homepage.dart';
 import 'package:papswap/widgets/profile.dart';
 import 'package:papswap/widgets/provider.dart';
@@ -26,33 +27,39 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
     super.initState();
     dataController = Get.put(DataController());
   }
-  int currentIndex1 = 0;   
-   final screens = [
+
+  int currentIndex1 = 0;
+  final screens = [
+    FeedPage(),
     HomePage(),
     WalletPage(),
     ProfilePage(),
-   ];
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: screens[currentIndex1],
       bottomNavigationBar: BottomNavigationBar(
-        // selectedItemColor: Colors.black,
-
         selectedLabelStyle: TextStyle(color: Colors.red),
-        // backgroundColor: Colors.white,
         items: [
           BottomNavigationBarItem(
             icon: Icon(
               (currentIndex1 == 0) ? Icons.home : Icons.home_outlined,
               color: Colors.black,
             ),
+            label: 'Feed',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              (currentIndex1 == 1) ? Icons.home : Icons.home_outlined,
+              color: Colors.black,
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              (currentIndex1 == 1)
+              (currentIndex1 == 2)
                   ? Icons.account_balance_wallet
                   : Icons.account_balance_wallet_outlined,
               color: Colors.black,
@@ -61,19 +68,20 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              (currentIndex1 == 2) ? Icons.person : Icons.person_outline,
+              (currentIndex1 == 3) ? Icons.person : Icons.person_outline,
               color: Colors.black,
             ),
             label: 'Profile',
           ),
         ],
-        // ),
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex1,
         onTap: (index) {
-          setState(() {
-            currentIndex1 = index;
-          });
+          setState(
+            () {
+              currentIndex1 = index;
+            },
+          );
         },
       ),
     );

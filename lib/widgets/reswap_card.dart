@@ -73,8 +73,13 @@ class _ReswapCardState extends State<ReswapCard> {
                     children: [
                       AppThemePapswap().freeboxh(1.18 * heightMultiplier),
                       Container(
-                        height: 3.53 * heightMultiplier,
+                        height: 3.7 * heightMultiplier,
                         width: 7.64 * widthMultiplier,
+                        padding: EdgeInsets.symmetric(vertical: 2),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border.all(width: 0.5),
+                        ),
                         child: Image.asset('assets/finallogo.PNG'),
                       ),
                     ],
@@ -213,18 +218,34 @@ class _ReswapCardState extends State<ReswapCard> {
               ),
             ),
             AppThemePapswap().freeboxh(0.94007 * heightMultiplier),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                AppThemePapswap().freeboxw(0.51 * widthMultiplier),
-                Expanded(
-                  child: Text(
-                    widget.snap['reswaped_text'],
-                    style: TextStyle(fontSize: 1.88 * textMultiplier),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.start,
+            //   children: [
+            AppThemePapswap().freeboxw(0.51 * widthMultiplier),
+            Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.grey.shade200,
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Your Opinion: ",
                   ),
-                ),
-              ],
+                  AppThemePapswap().freeboxw(10),
+                  Expanded(
+                    child: Text(
+                      widget.snap['reswaped_text'],
+                      style: TextStyle(fontSize: 1.88 * textMultiplier),
+                    ),
+                  ),
+                ],
+              ),
             ),
+            // ],
+            // ),
             AppThemePapswap().freeboxh(1.645 * heightMultiplier),
             Container(
               padding: EdgeInsets.all(0),

@@ -53,7 +53,7 @@ class _WalletPageState extends State<WalletPage> {
                 elevation: 0,
                 title: Text(
                   'account overview',
-                  style: TextStyle(color: Colors.indigo.shade900),
+                  style: TextStyle(color: Color.fromRGBO(26, 35, 126, 1)),
                 ),
                 actions: [
                   IconButton(
@@ -613,7 +613,7 @@ class _WalletPageState extends State<WalletPage> {
                           children: [
                             AppThemePapswap().freeboxw(1.53 * widthMultiplier),
                             Text(
-                              'Claim Rewards',
+                              'Claim Rewards  (Coming Soon)',
                               style: TextStyle(
                                 fontSize: 2.12 * textMultiplier,
                                 color: Colors.blue.shade900,

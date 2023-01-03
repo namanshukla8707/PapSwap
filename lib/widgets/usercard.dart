@@ -18,18 +18,18 @@ import 'package:papswap/widgets/styling.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
 
-class PostingCard extends StatefulWidget {
+class UserCard extends StatefulWidget {
   final snap;
   final uid;
   final likedata;
-  const PostingCard(
+  const UserCard(
       {Key? key, required this.snap, required this.uid, required this.likedata})
       : super(key: key);
   @override
-  State<PostingCard> createState() => _PostingCardState();
+  State<UserCard> createState() => _UserCardState();
 }
 
-class _PostingCardState extends State<PostingCard> {
+class _UserCardState extends State<UserCard> {
   bool isLiked = false;
 
   void setlikestatus() {
@@ -194,7 +194,7 @@ class _PostingCardState extends State<PostingCard> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text('PapSwap_official',
+                      Text('Username',
                           style: TextStyle(
                               fontSize: 2.35 * textMultiplier,
                               color: Color.fromARGB(255, 0, 0, 0),
@@ -294,13 +294,13 @@ class _PostingCardState extends State<PostingCard> {
                 // Expanded(
                 //   child: FittedBox(
                 // child:
-                Expanded(
-                  child: Text(
-                    widget.snap['catagory'],
-                    // result[index].fields.username.stringValue,
-                    style: TextStyle(fontSize: 1.88 * textMultiplier),
-                  ),
-                ),
+                // Expanded(
+                //   child: Text(
+                //     widget.snap['catagory'],
+                //     // result[index].fields.username.stringValue,
+                //     style: TextStyle(fontSize: 1.88 * textMultiplier),
+                //   ),
+                // ),
                 // ),
                 // ),
               ],
@@ -318,152 +318,173 @@ class _PostingCardState extends State<PostingCard> {
               ),
             ),
             AppThemePapswap().freeboxh(1.88 * heightMultiplier),
+            // Container(
+            //   // color: Colors.blue,
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.start,
+            //     children: [
+            //       Column(
+            //         children: [
+            //           IconButton(
+            //             constraints:
+            //                 BoxConstraints(minHeight: .588 * heightMultiplier),
+            //             padding: EdgeInsets.all(0),
+            //             alignment: Alignment.bottomLeft,
+            //             onPressed: () async {
+            //               await checklikestatus();
+            //               // await likeprocess();
+            //             },
+            //             icon: !isLiked
+            //                 ? Icon(
+            //                     Icons.local_fire_department_sharp,
+            //                     color: Color.fromARGB(255, 101, 101, 101),
+            //                   )
+            //                 : Icon(
+            //                     Icons.local_fire_department_sharp,
+            //                     color: Color.fromARGB(255, 255, 5, 5),
+            //                   ),
+            //           ),
+            //           AppThemePapswap().freeboxh(0.12 * heightMultiplier),
+            //           Container(
+            //             // color: Colors.green,
+            //             padding: EdgeInsets.all(0),
+            //             alignment: Alignment.bottomLeft,
+            //             child: Text(
+            //               widget.snap['like'].toString(),
+            //               // snap['naman'],
+            //               style: TextStyle(fontSize: 1.41011 * textMultiplier),
+            //             ),
+            //             //   ],
+            //             // ),
+            //           ),
+            //         ],
+            //       ),
+            //       AppThemePapswap().freeboxw(5.093 * widthMultiplier),
+            //       Column(
+            //         children: [
+            //           IconButton(
+            //             padding: EdgeInsets.all(0),
+            //             constraints:
+            //                 BoxConstraints(minHeight: 0.588 * heightMultiplier),
+            //             alignment: Alignment.topLeft,
+            //             onPressed: () {
+            //               showModalBottomSheet(
+            //                 elevation: 10,
+            //                 enableDrag: true,
+            //                 isDismissible: true,
+            //                 shape: RoundedRectangleBorder(
+            //                   borderRadius: BorderRadius.only(
+            //                     topLeft: Radius.circular(20),
+            //                     topRight: Radius.circular(20),
+            //                   ),
+            //                 ),
+            //                 context: context,
+            //                 builder: (context) => ReSwap(
+            //                   snap: widget.snap,
+            //                   uid: widget.uid,
+            //                 ),
+            //               );
+            //             },
+            //             icon: Icon(
+            //               Icons.swap_horiz,
+            //               color: Color.fromARGB(255, 101, 101, 101),
+            //             ),
+            //           ),
+            //           AppThemePapswap().freeboxh(0.12 * heightMultiplier),
+            //           Container(
+            //             alignment: Alignment.bottomLeft,
+            //             child: Text(
+            //               '111',
+            //               style: TextStyle(fontSize: 1.41011 * textMultiplier),
+            //             ),
+            //           ),
+            //         ],
+            //       ),
+            //       AppThemePapswap().freeboxw(4.584 * widthMultiplier),
+            //       AppThemePapswap().freeboxw(48.781 * widthMultiplier),
+            //       Expanded(
+            //         child: Container(
+            //           child: IconButton(
+            //             padding: EdgeInsets.all(0),
+            //             constraints:
+            //                 BoxConstraints(minHeight: 0.588 * heightMultiplier),
+            //             alignment: Alignment.bottomLeft,
+            //             onPressed: () async {
+            //               final uri = Uri.parse(widget.snap['image']);
+            //               final res = await http.get(uri);
+            //               final bytes = res.bodyBytes;
+
+            //               final temp = await getTemporaryDirectory();
+            //               final path = '${temp.path}/image.jpg';
+            //               File(path).writeAsBytesSync(bytes);
+
+            //               await Share.shareFiles([path],
+            //                   text:
+            //                       'See the latest pilocies by Goverment and Share your Opinion');
+            //             },
+            //             icon: Icon(
+            //               Icons.share,
+            //               color: Color.fromARGB(255, 101, 101, 101),
+            //             ),
+            //           ),
+            //         ),
+            //       ),
+            //     ],
+            //   ),
+            // ),
+            // // AppThemePapswap().freeboxh(0.12 * heightMultiplier),
+            // // Container(
+            // //   // color: Colors.red,
+            // //   child: Row(
+            // //     mainAxisAlignment: MainAxisAlignment.start,
+            // //     children: [
+            // //       AppThemePapswap().freeboxw(1.02 * widthMultiplier),
+            // //       // Container(
+            // //       //   // color: Colors.green,
+
+            // //       //   alignment: Alignment.bottomLeft,
+            // //       //   child: Text(
+            // //       //     widget.snap['like'].toString(),
+            // //       //     // snap['naman'],
+            // //       //     style: TextStyle(fontSize: 1.41011 * textMultiplier),
+            // //       //   ),
+            // //       //   //   ],
+            // //       //   // ),
+            // //       // ),
+            // //       AppThemePapswap().freeboxw(5.093 * widthMultiplier),
+            // //       Container(
+            // //         alignment: Alignment.bottomLeft,
+            // //         child: Text(
+            // //           '111',
+            // //           style: TextStyle(fontSize: 1.41011 * textMultiplier),
+            // //         ),
+            // //       ),
+            // //       AppThemePapswap().freeboxw(5.093 * widthMultiplier),
+            // //     ],
+            // //   ),
+            // // ),
+            AppThemePapswap().freeboxh(0.5 * heightMultiplier),
             Container(
-              // color: Colors.blue,
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.grey.shade200,
+              ),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Column(
-                    children: [
-                      IconButton(
-                        constraints:
-                            BoxConstraints(minHeight: .588 * heightMultiplier),
-                        padding: EdgeInsets.all(0),
-                        alignment: Alignment.bottomLeft,
-                        onPressed: () async {
-                          await checklikestatus();
-                          // await likeprocess();
-                        },
-                        icon: !isLiked
-                            ? Icon(
-                                Icons.local_fire_department_sharp,
-                                color: Color.fromARGB(255, 101, 101, 101),
-                              )
-                            : Icon(
-                                Icons.local_fire_department_sharp,
-                                color: Color.fromARGB(255, 255, 5, 5),
-                              ),
-                      ),
-                      AppThemePapswap().freeboxh(0.12 * heightMultiplier),
-                      Container(
-                        // color: Colors.green,
-                        padding: EdgeInsets.all(0),
-                        alignment: Alignment.bottomLeft,
-                        child: Text(
-                          widget.snap['like'].toString(),
-                          // snap['naman'],
-                          style: TextStyle(fontSize: 1.41011 * textMultiplier),
-                        ),
-                        //   ],
-                        // ),
-                      ),
-                    ],
+                  Text(
+                    "Users Opinion: ",
                   ),
-                  AppThemePapswap().freeboxw(5.093 * widthMultiplier),
-                  Column(
-                    children: [
-                      IconButton(
-                        padding: EdgeInsets.all(0),
-                        constraints:
-                            BoxConstraints(minHeight: 0.588 * heightMultiplier),
-                        alignment: Alignment.topLeft,
-                        onPressed: () {
-                          showModalBottomSheet(
-                            elevation: 10,
-                            enableDrag: true,
-                            isDismissible: true,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(20),
-                                topRight: Radius.circular(20),
-                              ),
-                            ),
-                            context: context,
-                            builder: (context) => ReSwap(
-                              snap: widget.snap,
-                              uid: widget.uid,
-                            ),
-                          );
-                        },
-                        icon: Icon(
-                          Icons.swap_horiz,
-                          color: Color.fromARGB(255, 101, 101, 101),
-                        ),
-                      ),
-                      AppThemePapswap().freeboxh(0.12 * heightMultiplier),
-                      Container(
-                        alignment: Alignment.bottomLeft,
-                        child: Text(
-                          '111',
-                          style: TextStyle(fontSize: 1.41011 * textMultiplier),
-                        ),
-                      ),
-                    ],
-                  ),
-                  AppThemePapswap().freeboxw(4.584 * widthMultiplier),
-                  AppThemePapswap().freeboxw(48.781 * widthMultiplier),
+                  AppThemePapswap().freeboxw(10),
                   Expanded(
-                    child: Container(
-                      child: IconButton(
-                        padding: EdgeInsets.all(0),
-                        constraints:
-                            BoxConstraints(minHeight: 0.588 * heightMultiplier),
-                        alignment: Alignment.bottomLeft,
-                        onPressed: () async {
-                          final uri = Uri.parse(widget.snap['image']);
-                          final res = await http.get(uri);
-                          final bytes = res.bodyBytes;
-
-                          final temp = await getTemporaryDirectory();
-                          final path = '${temp.path}/image.jpg';
-                          File(path).writeAsBytesSync(bytes);
-
-                          await Share.shareFiles([path],
-                              text:
-                                  'See the latest pilocies by Goverment and Share your Opinion');
-                        },
-                        icon: Icon(
-                          Icons.share,
-                          color: Color.fromARGB(255, 101, 101, 101),
-                        ),
-                      ),
-                    ),
+                    child: Text(
+                        "ajkbgabgagjkbabgljab iubalglakjbgjlabgakhlbg gblkangkjlagnkjabgagjklagba a;ognkaljgjkabgkjlangkabg aiognaklgnklabgnakbglkjabg aiognaklgnakjbgjkabglkajgbjlak  aobggkalbglakbgklas gsignsklgjb kjfbl kadl akldb kla vklja vnk a ajv klj vpowiwkjl vadb akuik laKUBv a a vklj vjk"),
                   ),
                 ],
               ),
             ),
-            // AppThemePapswap().freeboxh(0.12 * heightMultiplier),
-            // Container(
-            //   // color: Colors.red,
-            //   child: Row(
-            //     mainAxisAlignment: MainAxisAlignment.start,
-            //     children: [
-            //       AppThemePapswap().freeboxw(1.02 * widthMultiplier),
-            //       // Container(
-            //       //   // color: Colors.green,
-
-            //       //   alignment: Alignment.bottomLeft,
-            //       //   child: Text(
-            //       //     widget.snap['like'].toString(),
-            //       //     // snap['naman'],
-            //       //     style: TextStyle(fontSize: 1.41011 * textMultiplier),
-            //       //   ),
-            //       //   //   ],
-            //       //   // ),
-            //       // ),
-            //       AppThemePapswap().freeboxw(5.093 * widthMultiplier),
-            //       Container(
-            //         alignment: Alignment.bottomLeft,
-            //         child: Text(
-            //           '111',
-            //           style: TextStyle(fontSize: 1.41011 * textMultiplier),
-            //         ),
-            //       ),
-            //       AppThemePapswap().freeboxw(5.093 * widthMultiplier),
-            //     ],
-            //   ),
-            // ),
-            AppThemePapswap().freeboxh(1.6452 * heightMultiplier),
+            AppThemePapswap().freeboxh(12),
           ],
         ),
       ),

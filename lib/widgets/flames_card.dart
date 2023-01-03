@@ -72,8 +72,13 @@ class _FlamesCardState extends State<FlamesCard> {
                     children: [
                       AppThemePapswap().freeboxh(1.18 * heightMultiplier),
                       Container(
-                        height: 3.53 * heightMultiplier,
+                        height: 3.7 * heightMultiplier,
                         width: 7.64 * widthMultiplier,
+                        padding: EdgeInsets.symmetric(vertical: 2),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border.all(width: 0.5),
+                        ),
                         child: Image.asset('assets/finallogo.PNG'),
                       ),
                     ],
