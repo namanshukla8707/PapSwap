@@ -19,22 +19,20 @@ class _UserSCreenState extends State<UserSCreen> {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
 
   List<Map<String, dynamic>> list = [];
-
-  List<String> likedata = [];
-
   DocumentSnapshot? lastDocument;
   bool isMoredata = true;
 
   bool isLoading = false;
   String uid = "";
   void pageData() async {
+    print('call');
     if (isMoredata) {
       if (mounted) {
         setState(() {
           isLoading = true;
         });
       }
-      final collectionReference = _db.collection('posts');
+      final collectionReference = _db.collection('feed');
 
       late QuerySnapshot<Map<String, dynamic>> querySnapshot;
       if (lastDocument == null) {
@@ -53,25 +51,6 @@ class _UserSCreenState extends State<UserSCreen> {
           print(e);
         }
       }
-
-      List<String> currentids =
-          querySnapshot.docs.map((e) => e.id.toString().trim()).toList();
-      if (currentids.isNotEmpty) {
-        try {
-          final status = await FirebaseFirestore.instance
-              .collection('users')
-              .doc(uid.toString().trim())
-              .collection('flames')
-              .where('post_Id', whereIn: currentids)
-              .get();
-          likedata.addAll(status.docs
-              .map((e) => e.data()['post_Id'].toString().trim())
-              .toList());
-        } catch (e) {
-          print(e);
-        }
-      }
-
       lastDocument = querySnapshot.docs.last;
 
       list.addAll(querySnapshot.docs.map((e) => e.data()));
@@ -128,7 +107,6 @@ class _UserSCreenState extends State<UserSCreen> {
                 UserCard(
                   snap: list[index],
                   uid: uid,
-                  likedata: likedata,
                 ),
                 !isMoredata
                     ? AppThemePapswap().freeboxh(0)

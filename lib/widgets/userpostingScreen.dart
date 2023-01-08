@@ -1,28 +1,23 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace, avoid_unnecessary_containers, unnecessary_import, prefer_typing_uninitialized_variables, unused_import, non_constant_identifier_names, use_build_context_synchronously, avoid_print, unused_local_variable
 import 'dart:io';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:papswap/widgets/public_post.dart';
 import 'package:papswap/widgets/reswap_data.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class UserPostScreen extends StatefulWidget {
-  final link;
-  final category;
-  final posttext;
-  final reswps;
-  final uid;
-  final postid;
+  final username;
+  final userimage;
 
   const UserPostScreen(
       {Key? key,
-      required this.link,
-      required this.category,
-      required this.postid,
-      required this.posttext,
-      required this.reswps,
-      required this.uid})
+      required this.username,
+      required this.userimage
+      })
       : super(key: key);
 
   @override
@@ -45,8 +40,6 @@ class _UserPostScreenState extends State<UserPostScreen> {
     final imageSizeMultiplier = blockWidth;
     final heightMultiplier = blockHeight;
     final widthMultiplier = blockWidth;
-    print(widget.link);
-    print('69');
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -70,7 +63,7 @@ class _UserPostScreenState extends State<UserPostScreen> {
                     IconButton(
                       onPressed: () {
                         Navigator.pop(context);
-                        Navigator.pop(context);
+                        // Navigator.pop(context);
                       },
                       icon: Icon(
                         Icons.close,
@@ -89,24 +82,20 @@ class _UserPostScreenState extends State<UserPostScreen> {
                         backgroundColor: MaterialStateProperty.all(Colors.red),
                       ),
                       onPressed: () async {
-                        await reswapData(
-                            filepath: filepath,
-                            text: controller.text,
-                            image: widget.link,
-                            category: widget.category,
-                            posttext: widget.posttext,
-                            reswaps: widget.reswps,
-                            uid: widget.uid,
-                            postId: widget.postid);
+                          // print(widget.userimage);
+                          // print(widget.username);
+                          // print(filepath);
+                          // print(controller.text);
+                        await publicPost(filepath: filepath, text: controller.text, userimage: widget.userimage, username: widget.username);
                         Navigator.of(context).pop();
                       },
                       child: Row(
                         children: [
-                          Text('Reswap'),
+                          Text('Post'),
                           SizedBox(
                             width: 1.02 * widthMultiplier,
                           ),
-                          Icon(Icons.swap_horiz),
+                          Icon(Icons.post_add_rounded),
                         ],
                       ),
                     ),
@@ -141,7 +130,7 @@ class _UserPostScreenState extends State<UserPostScreen> {
                     style: TextStyle(fontSize: 1.880141 * textMultiplier),
                   ),
                   Text(
-                    'Username',
+                    widget.userimage==Null ? 'Username' : widget.username,
                     style: TextStyle(
                       fontSize: 2.3502 * textMultiplier,
                       fontWeight: FontWeight.w400,
@@ -272,35 +261,7 @@ class _UserPostScreenState extends State<UserPostScreen> {
                         ],
                       ),
               ),
-              // Padding(
-              //   padding:
-              //       EdgeInsets.symmetric(horizontal: 5.1 * widthMultiplier),
-              //   child: Card(
-              //     shape: RoundedRectangleBorder(
-              //         borderRadius: BorderRadius.circular(20)),
-              //     elevation: 6,
-              //     child: Container(
-              //       padding: EdgeInsets.all(0),
-              //       decoration: BoxDecoration(
-              //         // color: Colors.green,
-              //         borderRadius: BorderRadius.circular(20),
-              //       ),
-              //       // height: 47.004 * heightMultiplier,
-              //       width: MediaQuery.of(context).size.width,
-              //       child: ClipRRect(
-              //         borderRadius: BorderRadius.circular(20),
-              //         child: Image(
-              //           image: NetworkImage(
-              //             widget.link,
-              //           ),
-              //           // color: Colors.blue,
-              //           fit: BoxFit.fill,
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
-            ],
+              ],
           ),
         ),
       ),
