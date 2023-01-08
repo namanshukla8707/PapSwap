@@ -2,15 +2,31 @@
 
 // import 'dart:js';
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:papswap/widgets/postingscreen.dart';
 import 'package:papswap/widgets/styling.dart';
 import 'package:papswap/widgets/userpostingScreen.dart';
 import 'package:papswap/widgets/userscreen.dart';
 
-class FeedPage extends StatelessWidget {
+class FeedPage extends StatefulWidget {
   const FeedPage({super.key});
 
+  @override
+  State<FeedPage> createState() => _FeedPageState();
+}
+
+class _FeedPageState extends State<FeedPage> {
+  String? username;
+
+  String? image;
+  @override
+  void initState(){
+    super.initState();
+    username = FirebaseAuth.instance.currentUser!.displayName;
+    image = FirebaseAuth.instance.currentUser!.photoURL;
+  }
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -26,7 +42,9 @@ class FeedPage extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>UserPostScreen(link: link, category: category, postid: postid, posttext: posttext, reswps: reswps, uid: uid),),),
+          username ??= "";
+          image ??="";
+          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>UserPostScreen(username: username,userimage: image,),));
         },
         backgroundColor: Colors.red,
         child: Icon(Icons.add),
