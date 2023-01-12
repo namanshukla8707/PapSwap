@@ -107,6 +107,7 @@ class _UserSCreenState extends State<UserSCreen> {
                 UserCard(
                   snap: list[index],
                   uid: uid,
+                  // likedata: likedata,
                 ),
                 !isMoredata
                     ? AppThemePapswap().freeboxh(0)

@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_ructors, prefer__ructors, duplicate_ignore, prefer__literals_to_create_immutables, sized_box_for_whitespace, avoid_print, must_be_immutable, unused_local_variable, unused_import, avoid_unnecessary_containers, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_ructors, prefer__ructors, duplicate_ignore, prefer__literals_to_create_immutables, sized_box_for_whitespace, avoid_print, must_be_immutable, unused_local_variable, unused_import, avoid_unnecessary_containers, prefer_const_constructors, use_key_in_widget_constructors
 
 // import 'dart:html';
 // import 'dart:html';
@@ -62,7 +62,7 @@ class NewOffers extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(1.65 * heightMultiplier),
@@ -70,7 +70,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(1.645 * heightMultiplier),
@@ -86,7 +86,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(0.94 * heightMultiplier),
@@ -94,7 +94,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         Text(
@@ -115,11 +115,11 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: AppThemePapswap().freeboxh(1.88 * heightMultiplier),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Container(
                       // height: 35.3 * heightMultiplier,
                       width: MediaQuery.of(context).size.width,
@@ -156,7 +156,7 @@ class NewOffers extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(1.65 * heightMultiplier),
@@ -164,7 +164,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(1.645 * heightMultiplier),
@@ -180,7 +180,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(0.94 * heightMultiplier),
@@ -188,7 +188,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         Text(
@@ -209,11 +209,11 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: AppThemePapswap().freeboxh(1.88 * heightMultiplier),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Container(
                       // height: 35.3 * heightMultiplier,
                       width: MediaQuery.of(context).size.width,
@@ -250,7 +250,7 @@ class NewOffers extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(1.65 * heightMultiplier),
@@ -258,7 +258,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(1.645 * heightMultiplier),
@@ -274,7 +274,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(0.94 * heightMultiplier),
@@ -282,7 +282,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         Text(
@@ -303,11 +303,11 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: AppThemePapswap().freeboxh(1.88 * heightMultiplier),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Container(
                       // height: 35.3 * heightMultiplier,
                       width: MediaQuery.of(context).size.width,
@@ -344,7 +344,7 @@ class NewOffers extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(1.65 * heightMultiplier),
@@ -352,7 +352,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(1.645 * heightMultiplier),
@@ -368,7 +368,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         AppThemePapswap().freeboxh(0.94 * heightMultiplier),
@@ -376,7 +376,7 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Row(
                       children: [
                         Text(
@@ -397,11 +397,11 @@ class NewOffers extends StatelessWidget {
                     ),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: AppThemePapswap().freeboxh(1.88 * heightMultiplier),
                   ),
                   ImageFiltered(
-                    imageFilter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
                     child: Container(
                       // height: 35.3 * heightMultiplier,
                       width: MediaQuery.of(context).size.width,
@@ -453,24 +453,32 @@ class NewOffers extends StatelessWidget {
                     // color: Colors.blue,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/finallogo.PNG',
-                        // fit: BoxFit.fill,
-                      ),
-                      AppThemePapswap().freeboxh(16),
-                      Text('Movie'),
-                      AppThemePapswap().freeboxh(8),
-                      Row(
-                        children: [
-                          Text('200'),
-                          AppThemePapswap().freeboxw(3),
-                          Text('PapTokens'),
-                        ],
-                      ),
-                    ],
+                  child: ImageFiltered(
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AppThemePapswap().freeboxh(10),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.network(
+                            'https://pbs.twimg.com/media/FgiltsdaUAAUG4Z?format=jpg&name=large',
+                            // fit: BoxFit.fill,
+                          ),
+                        ),
+                        AppThemePapswap().freeboxh(16),
+                        Text('Movie'),
+                        AppThemePapswap().freeboxh(8),
+                        Row(
+                          children: [
+                            Text('200'),
+                            AppThemePapswap().freeboxw(3),
+                            Text('PapTokens'),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -489,24 +497,31 @@ class NewOffers extends StatelessWidget {
                     // color: Colors.blue,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/finallogo.PNG',
-                        // fit: BoxFit.fill,
-                      ),
-                      AppThemePapswap().freeboxh(16),
-                      Text('Movie'),
-                      AppThemePapswap().freeboxh(8),
-                      Row(
-                        children: [
-                          Text('200'),
-                          AppThemePapswap().freeboxw(3),
-                          Text('PapTokens'),
-                        ],
-                      ),
-                    ],
+                  child: ImageFiltered(
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AppThemePapswap().freeboxh(10),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.network(
+                            'https://www.joblo.com/wp-content/uploads/2022/01/avatar-2-poster-1-400x600.jpg',
+                            // fit: BoxFit.fill,
+                          ),
+                        ),
+                        AppThemePapswap().freeboxh(16),
+                        Text('Movie'),
+                        AppThemePapswap().freeboxh(8),
+                        Row(
+                          children: [
+                            Text('200'),
+                            AppThemePapswap().freeboxw(3),
+                            Text('PapTokens'),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -525,24 +540,28 @@ class NewOffers extends StatelessWidget {
                     // color: Colors.blue,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/finallogo.PNG',
-                        // fit: BoxFit.fill,
-                      ),
-                      AppThemePapswap().freeboxh(16),
-                      Text('Movie'),
-                      AppThemePapswap().freeboxh(8),
-                      Row(
-                        children: [
-                          Text('200'),
-                          AppThemePapswap().freeboxw(3),
-                          Text('PapTokens'),
-                        ],
-                      ),
-                    ],
+                  child: ImageFiltered(
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AppThemePapswap().freeboxh(10),
+                        Image.network(
+                          'https://i0.wp.com/www.indesignskills.com/wp-content/uploads/2022/06/The-Batman-2.jpg?resize=850%2C1259&ssl=1',
+                          // fit: BoxFit.fill,
+                        ),
+                        AppThemePapswap().freeboxh(16),
+                        Text('Movie'),
+                        AppThemePapswap().freeboxh(8),
+                        Row(
+                          children: [
+                            Text('200'),
+                            AppThemePapswap().freeboxw(3),
+                            Text('PapTokens'),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -561,24 +580,31 @@ class NewOffers extends StatelessWidget {
                     // color: Colors.blue,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/finallogo.PNG',
-                        // fit: BoxFit.fill,
-                      ),
-                      AppThemePapswap().freeboxh(16),
-                      Text('Movie'),
-                      AppThemePapswap().freeboxh(8),
-                      Row(
-                        children: [
-                          Text('200'),
-                          AppThemePapswap().freeboxw(3),
-                          Text('PapTokens'),
-                        ],
-                      ),
-                    ],
+                  child: ImageFiltered(
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AppThemePapswap().freeboxh(10),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.network(
+                            'https://1.bp.blogspot.com/-xyH0Qs6yPmI/Xvs0bhdcQPI/AAAAAAAAZ_s/9kRuWAaGKLoXcwq-Dz-cgswdrMV3eHYOQCLcBGAsYHQ/s1600/Bhuj-Movie-Poster.jpg',
+                            // fit: BoxFit.fill,
+                          ),
+                        ),
+                        AppThemePapswap().freeboxh(16),
+                        Text('Movie'),
+                        AppThemePapswap().freeboxh(8),
+                        Row(
+                          children: [
+                            Text('200'),
+                            AppThemePapswap().freeboxw(3),
+                            Text('PapTokens'),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -597,24 +623,30 @@ class NewOffers extends StatelessWidget {
                     // color: Colors.blue,
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        'assets/finallogo.PNG',
-                        // fit: BoxFit.fill,
-                      ),
-                      AppThemePapswap().freeboxh(16),
-                      Text('Movie'),
-                      AppThemePapswap().freeboxh(8),
-                      Row(
-                        children: [
-                          Text('200'),
-                          AppThemePapswap().freeboxw(3),
-                          Text('PapTokens'),
-                        ],
-                      ),
-                    ],
+                  child: ImageFiltered(
+                    imageFilter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        AppThemePapswap().freeboxh(10),
+                        ClipRRect(
+                          child: Image.network(
+                            'https://www.joblo.com/wp-content/uploads/2022/11/the-devil-conspiracy-1-400x600.jpg',
+                            // fit: BoxFit.fill,
+                          ),
+                        ),
+                        AppThemePapswap().freeboxh(16),
+                        Text('Movie'),
+                        AppThemePapswap().freeboxh(8),
+                        Row(
+                          children: [
+                            Text('200'),
+                            AppThemePapswap().freeboxw(3),
+                            Text('PapTokens'),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

@@ -120,12 +120,10 @@ class QuestionPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Center(
-                  child: Expanded(
-                    child: Text(
-                      'Any other Startup Stakeholder',
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
+                  child: Text(
+                    'Any other Startup Stakeholder',
+                    style: TextStyle(
+                      fontSize: 16,
                     ),
                   ),
                 ),
@@ -141,12 +139,10 @@ class QuestionPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Center(
-                  child: Expanded(
-                    child: Text(
-                      'Common Respomwible Citizen',
-                      style: TextStyle(
-                        fontSize: 16,
-                      ),
+                  child: Text(
+                    'Common Respomwible Citizen',
+                    style: TextStyle(
+                      fontSize: 16,
                     ),
                   ),
                 ),

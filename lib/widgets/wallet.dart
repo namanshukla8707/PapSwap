@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:papswap/widgets/offers.dart';
 import 'package:papswap/widgets/provider.dart';
 import 'package:papswap/widgets/styling.dart';
+import 'package:papswap/widgets/supertoken.dart';
 
 class WalletPage extends StatefulWidget {
   const WalletPage({super.key});
@@ -239,11 +240,11 @@ class _WalletPageState extends State<WalletPage> {
                                         Container(
                                           padding: EdgeInsets.all(0),
                                           height: 7.051 * heightMultiplier,
-                                          width: 10.2 * widthMultiplier,
+                                          width: 20.2 * widthMultiplier,
                                           // color: Colors.red,
                                           child: Image.asset(
-                                            'assets/finallogo.PNG',
-                                            alignment: Alignment.topLeft,
+                                            'assets/supertoken.png',
+                                            alignment: Alignment.topCenter,
                                           ),
                                         ),
                                       ],
@@ -355,7 +356,14 @@ class _WalletPageState extends State<WalletPage> {
                                             .freeboxw(10.5 * widthMultiplier),
                                         Container(
                                           child: ElevatedButton(
-                                            onPressed: () {},
+                                            onPressed: () {
+                                              Navigator.of(context).push(
+                                                MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      SuperToken(),
+                                                ),
+                                              );
+                                            },
                                             child: Text(
                                               'Check Now',
                                               style: TextStyle(
@@ -448,11 +456,12 @@ class _WalletPageState extends State<WalletPage> {
                                         Container(
                                           padding: EdgeInsets.all(0),
                                           height: 7.051 * heightMultiplier,
-                                          width: 10.2 * widthMultiplier,
+                                          width: 20.2 * widthMultiplier,
                                           // color: Colors.red,
                                           child: Image.asset(
-                                            'assets/finallogo.PNG',
-                                            alignment: Alignment.topLeft,
+                                            'assets/paptoken.png',
+                                            // fit: BoxFit.fill,
+                                            alignment: Alignment.topCenter,
                                           ),
                                         ),
                                       ],

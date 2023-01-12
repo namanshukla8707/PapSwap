@@ -5,6 +5,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:papswap/question_page.dart';
 import 'package:papswap/widgets/postingscreen.dart';
 import 'package:papswap/widgets/styling.dart';
 import 'package:papswap/widgets/userpostingScreen.dart';
@@ -22,11 +23,12 @@ class _FeedPageState extends State<FeedPage> {
 
   String? image;
   @override
-  void initState(){
+  void initState() {
     super.initState();
     username = FirebaseAuth.instance.currentUser!.displayName;
     image = FirebaseAuth.instance.currentUser!.photoURL;
   }
+
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
@@ -43,8 +45,15 @@ class _FeedPageState extends State<FeedPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           username ??= "";
-          image ??="";
-          Navigator.of(context).push(MaterialPageRoute(builder: (context)=>UserPostScreen(username: username,userimage: image,),));
+          image ??= "";
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => UserPostScreen(
+                username: username,
+                userimage: image,
+              ),
+            ),
+          );
         },
         backgroundColor: Colors.red,
         child: Icon(Icons.add),
@@ -112,7 +121,13 @@ class _FeedPageState extends State<FeedPage> {
                                 horizontal: 0.588 * widthMultiplier,
                                 vertical: 0.24 * heightMultiplier),
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => QuestionPage(),
+                                  ),
+                                );
+                              },
                               child: Container(
                                 // width: 70,
                                 padding: EdgeInsets.all(0),
@@ -124,33 +139,34 @@ class _FeedPageState extends State<FeedPage> {
                                     ),
                                     borderRadius: BorderRadius.circular(40)),
                                 child: Center(
-                                    child: Row(
-                                  children: [
-                                    // AppThemePapswap().freeboxw(10),
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 6.0, bottom: 6.0, left: 10),
-                                      child: Container(
-                                        // decoration: BoxDecoration(
-                                        //   borderRadius:
-                                        //       BorderRadius.circular(10),
-                                        // ),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(16),
-                                          child: Image.asset(
-                                              'assets/download1.png'),
+                                  child: Row(
+                                    children: [
+                                      // AppThemePapswap().freeboxw(10),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            top: 6.0, bottom: 6.0, left: 10),
+                                        child: Container(
+                                          // decoration: BoxDecoration(
+                                          //   borderRadius:
+                                          //       BorderRadius.circular(10),
+                                          // ),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(16),
+                                            child: Image.asset(
+                                                'assets/download1.png'),
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    Text(
-                                      '   MEITY Startup Hub    ',
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 1.645 * textMultiplier),
-                                    ),
-                                  ],
-                                )),
+                                      Text(
+                                        '   MEITY Startup Hub    ',
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 1.645 * textMultiplier),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               ),
                             ),
                           ),
@@ -159,7 +175,13 @@ class _FeedPageState extends State<FeedPage> {
                                 horizontal: 0.588 * widthMultiplier,
                                 vertical: 0.24 * heightMultiplier),
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => QuestionPage(),
+                                  ),
+                                );
+                              },
                               child: Container(
                                 // width: 70,
                                 padding: EdgeInsets.all(0),
