@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable, prefer_const_constructors, unused_import
+// ignore_for_file: unused_local_variable, prefer_const_constructors, unused_import, avoid_unnecessary_containers
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -96,280 +96,167 @@ class _HomePageState extends State<HomePage> {
                   bottom: 1.18 * heightMultiplier,
                   top: 1.18 * heightMultiplier),
               // color: Colors.white,
-              height: 5.9 * heightMultiplier,
+              height: 10.9 * heightMultiplier,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 0.588 * widthMultiplier,
-                        vertical: 0.24 * heightMultiplier),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          check = "ok";
-                        });
-                      },
-                      child: Container(
-                        // width: 70,
-                        padding: EdgeInsets.all(0),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(58, 202, 202, 202),
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 0.255 * widthMultiplier,
+                  Row(
+                    // scrollDirection: Axis.horizontal,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 0.588 * widthMultiplier,
+                            vertical: 0.24 * heightMultiplier),
+                        child: InkWell(
+                          onTap: () {
+                            // Navigator.of(context).push(
+                            //   MaterialPageRoute(
+                            //     builder: (context) => QuestionPage(),
+                            //   ),
+                            // );
+                          },
+                          child: Container(
+                            // width: 70,
+                            padding: EdgeInsets.all(0),
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(57, 107, 106, 106),
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 0.255 * widthMultiplier,
+                                ),
+                                borderRadius: BorderRadius.circular(40)),
+                            child: Center(
+                              child: Row(
+                                children: [
+                                  // AppThemePapswap().freeboxw(10),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 6.0, bottom: 6.0, left: 10),
+                                    child: Container(
+                                      // decoration: BoxDecoration(
+                                      //   borderRadius:
+                                      //       BorderRadius.circular(10),
+                                      // ),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(16),
+                                        child:
+                                            Image.asset('assets/download1.png'),
+                                      ),
+                                    ),
+                                  ),
+                                  Text(
+                                    '   MEITY Startup Hub    ',
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 1.645 * textMultiplier),
+                                  ),
+                                ],
+                              ),
                             ),
-                            borderRadius: BorderRadius.circular(40)),
-                        child: Center(
-                            child: Text(
-                          '   All   ',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 1.645 * textMultiplier),
-                        )),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 0.588 * widthMultiplier,
-                        vertical: 0.24 * heightMultiplier),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          check = "Ministry of Development";
-                        });
-                      },
-                      child: Container(
-                        // width: 170,
-                        decoration: BoxDecoration(
-                            // color: Color.fromARGB(161, 255, 214, 214),
-                            color: Color.fromARGB(58, 202, 202, 202),
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 0.255 * widthMultiplier,
-                            ),
-                            borderRadius: BorderRadius.circular(40)),
-                        child: Center(
-                          child: Text(
-                            '   Ministry of Development   ',
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 1.645 * textMultiplier),
                           ),
                         ),
                       ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 0.588 * widthMultiplier,
-                        vertical: 0.24 * heightMultiplier),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          check = "Ministry of Rural area Development";
-                        });
-                      },
-                      child: Container(
-                        // width: 70,
-                        padding: EdgeInsets.all(0),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(58, 202, 202, 202),
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 0.255 * widthMultiplier,
-                            ),
-                            borderRadius: BorderRadius.circular(40)),
-                        child: Center(
-                            child: Text(
-                          '   Ministry of Rural area Development   ',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 1.645 * textMultiplier),
-                        )),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 0.588 * widthMultiplier,
+                            vertical: 0.24 * heightMultiplier),
+                        child: InkWell(
+                          onTap: () {
+                            // Navigator.of(context).push(
+                            //   MaterialPageRoute(
+                            //     builder: (context) => QuestionPage(),
+                            //   ),
+                            // );
+                          },
+                          child: Container(
+                            // width: 70,
+                            padding: EdgeInsets.all(0),
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(57, 107, 106, 106),
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 0.255 * widthMultiplier,
+                                ),
+                                borderRadius: BorderRadius.circular(40)),
+                            child: Center(
+                                child: Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 6.0, bottom: 6.0, left: 6),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(40),
+                                    ),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(40),
+                                      child: Image.asset('assets/download.jpg'),
+                                    ),
+                                  ),
+                                ),
+                                Text(
+                                  '   StartInUp    ',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 1.645 * textMultiplier),
+                                ),
+                              ],
+                            )),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 0.588 * widthMultiplier,
-                        vertical: 0.24 * heightMultiplier),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          check = "Ministry of Child Development";
-                        });
-                      },
-                      child: Container(
-                        // width: 70,
-                        padding: EdgeInsets.all(0),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(58, 202, 202, 202),
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 0.255 * widthMultiplier,
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 0.588 * widthMultiplier,
+                            vertical: 0.24 * heightMultiplier),
+                        child: InkWell(
+                          onTap: () {
+                            // Navigator.of(context).push(
+                            //   MaterialPageRoute(
+                            //     builder: (context) => QuestionPage(),
+                            //   ),
+                            // );
+                          },
+                          child: Container(
+                            // width: 70,
+                            padding: EdgeInsets.all(0),
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(57, 107, 106, 106),
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 0.255 * widthMultiplier,
+                                ),
+                                borderRadius: BorderRadius.circular(40)),
+                            child: Center(
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        top: 6.0, bottom: 6.0, left: 6),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(40),
+                                      ),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(40),
+                                        child:
+                                            Image.asset('assets/BCCI_logo.png'),
+                                      ),
+                                    ),
+                                  ),
+                                  Text(
+                                    '   BCCI    ',
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 1.645 * textMultiplier),
+                                  ),
+                                ],
+                              ),
                             ),
-                            borderRadius: BorderRadius.circular(40)),
-                        child: Center(
-                            child: Text(
-                          '   Ministry of Child Development   ',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 1.645 * textMultiplier),
-                        )),
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 0.588 * widthMultiplier,
-                        vertical: 0.24 * heightMultiplier),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          check = "Ministry of Defence";
-                        });
-                      },
-                      child: Container(
-                        // width: 70,
-                        padding: EdgeInsets.all(0),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(58, 202, 202, 202),
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 0.255 * widthMultiplier,
-                            ),
-                            borderRadius: BorderRadius.circular(40)),
-                        child: Center(
-                            child: Text(
-                          '   Ministry of Defence   ',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 1.645 * textMultiplier),
-                        )),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 0.588 * widthMultiplier,
-                        vertical: 0.24 * heightMultiplier),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          check = "Road and transportation ministry";
-                        });
-                      },
-                      child: Container(
-                        // width: 70,
-                        padding: EdgeInsets.all(0),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(58, 202, 202, 202),
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 0.255 * widthMultiplier,
-                            ),
-                            borderRadius: BorderRadius.circular(40)),
-                        child: Center(
-                            child: Text(
-                          '   Road and transportation ministry   ',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 1.645 * textMultiplier),
-                        )),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 0.588 * widthMultiplier,
-                        vertical: 0.24 * heightMultiplier),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          check = "Ministry of Educational Development";
-                        });
-                      },
-                      child: Container(
-                        // width: 70,
-                        padding: EdgeInsets.all(0),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(58, 202, 202, 202),
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 0.255 * widthMultiplier,
-                            ),
-                            borderRadius: BorderRadius.circular(40)),
-                        child: Center(
-                            child: Text(
-                          '   Ministry of Educational Development   ',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 1.645 * textMultiplier),
-                        )),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 0.588 * widthMultiplier,
-                        vertical: 0.24 * heightMultiplier),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          check = "Health Ministry";
-                        });
-                      },
-                      child: Container(
-                        // width: 70,
-                        padding: EdgeInsets.all(0),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(58, 202, 202, 202),
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 0.255 * widthMultiplier,
-                            ),
-                            borderRadius: BorderRadius.circular(40)),
-                        child: Center(
-                            child: Text(
-                          '   Health Ministry   ',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 1.645 * textMultiplier),
-                        )),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: 0.588 * widthMultiplier,
-                        vertical: 0.24 * heightMultiplier),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          check = "Home Ministry";
-                        });
-                      },
-                      child: Container(
-                        // width: 70,
-                        padding: EdgeInsets.all(0),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(58, 202, 202, 202),
-                            border: Border.all(
-                              color: Colors.black,
-                              width: 0.255 * widthMultiplier,
-                            ),
-                            borderRadius: BorderRadius.circular(40)),
-                        child: Center(
-                            child: Text(
-                          '   Home Ministry   ',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 1.645 * textMultiplier),
-                        )),
-                      ),
-                    ),
+                    ],
                   ),
                 ],
               ),

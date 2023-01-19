@@ -14,10 +14,7 @@ class UserPostScreen extends StatefulWidget {
   final userimage;
 
   const UserPostScreen(
-      {Key? key,
-      required this.username,
-      required this.userimage
-      })
+      {Key? key, required this.username, required this.userimage})
       : super(key: key);
 
   @override
@@ -70,7 +67,7 @@ class _UserPostScreenState extends State<UserPostScreen> {
                       ),
                     ),
                     SizedBox(
-                      width: 56.0224 * widthMultiplier,
+                      width: 58.0224 * widthMultiplier,
                     ),
                     ElevatedButton(
                       style: ButtonStyle(
@@ -82,11 +79,15 @@ class _UserPostScreenState extends State<UserPostScreen> {
                         backgroundColor: MaterialStateProperty.all(Colors.red),
                       ),
                       onPressed: () async {
-                          // print(widget.userimage);
-                          // print(widget.username);
-                          // print(filepath);
-                          // print(controller.text);
-                        await publicPost(filepath: filepath, text: controller.text, userimage: widget.userimage, username: widget.username);
+                        // print(widget.userimage);
+                        // print(widget.username);
+                        // print(filepath);
+                        // print(controller.text);
+                        await publicPost(
+                            filepath: filepath,
+                            text: controller.text,
+                            userimage: widget.userimage,
+                            username: widget.username);
                         Navigator.of(context).pop();
                       },
                       child: Row(
@@ -130,7 +131,7 @@ class _UserPostScreenState extends State<UserPostScreen> {
                     style: TextStyle(fontSize: 1.880141 * textMultiplier),
                   ),
                   Text(
-                    widget.userimage==Null ? 'Username' : widget.username,
+                    widget.userimage == Null ? 'Username' : widget.username,
                     style: TextStyle(
                       fontSize: 2.3502 * textMultiplier,
                       fontWeight: FontWeight.w400,
@@ -261,7 +262,7 @@ class _UserPostScreenState extends State<UserPostScreen> {
                         ],
                       ),
               ),
-              ],
+            ],
           ),
         ),
       ),

@@ -113,114 +113,182 @@ class _FeedPageState extends State<FeedPage> {
                       ),
                       // color: Colors.white,
                       height: 10.9 * heightMultiplier,
-                      child: Row(
-                        // scrollDirection: Axis.horizontal,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
                         children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 0.588 * widthMultiplier,
-                                vertical: 0.24 * heightMultiplier),
-                            child: InkWell(
-                              onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) => QuestionPage(),
-                                  ),
-                                );
-                              },
-                              child: Container(
-                                // width: 70,
-                                padding: EdgeInsets.all(0),
-                                decoration: BoxDecoration(
-                                    color: Color.fromARGB(57, 107, 106, 106),
-                                    border: Border.all(
-                                      color: Colors.black,
-                                      width: 0.255 * widthMultiplier,
-                                    ),
-                                    borderRadius: BorderRadius.circular(40)),
-                                child: Center(
-                                  child: Row(
-                                    children: [
-                                      // AppThemePapswap().freeboxw(10),
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            top: 6.0, bottom: 6.0, left: 10),
-                                        child: Container(
-                                          // decoration: BoxDecoration(
-                                          //   borderRadius:
-                                          //       BorderRadius.circular(10),
-                                          // ),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(16),
-                                            child: Image.asset(
-                                                'assets/download1.png'),
-                                          ),
+                          Row(
+                            // scrollDirection: Axis.horizontal,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 0.588 * widthMultiplier,
+                                    vertical: 0.24 * heightMultiplier),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) => QuestionPage(),
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    // width: 70,
+                                    padding: EdgeInsets.all(0),
+                                    decoration: BoxDecoration(
+                                        color:
+                                            Color.fromARGB(57, 107, 106, 106),
+                                        border: Border.all(
+                                          color: Colors.black,
+                                          width: 0.255 * widthMultiplier,
                                         ),
+                                        borderRadius:
+                                            BorderRadius.circular(40)),
+                                    child: Center(
+                                      child: Row(
+                                        children: [
+                                          // AppThemePapswap().freeboxw(10),
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 6.0,
+                                                bottom: 6.0,
+                                                left: 10),
+                                            child: Container(
+                                              // decoration: BoxDecoration(
+                                              //   borderRadius:
+                                              //       BorderRadius.circular(10),
+                                              // ),
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(16),
+                                                child: Image.asset(
+                                                    'assets/download1.png'),
+                                              ),
+                                            ),
+                                          ),
+                                          Text(
+                                            '   MEITY Startup Hub    ',
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize:
+                                                    1.645 * textMultiplier),
+                                          ),
+                                        ],
                                       ),
-                                      Text(
-                                        '   MEITY Startup Hub    ',
-                                        style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 1.645 * textMultiplier),
-                                      ),
-                                    ],
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 0.588 * widthMultiplier,
-                                vertical: 0.24 * heightMultiplier),
-                            child: InkWell(
-                              onTap: () {
-                                Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context) => QuestionPage(),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 0.588 * widthMultiplier,
+                                    vertical: 0.24 * heightMultiplier),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) => QuestionPage(),
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    // width: 70,
+                                    padding: EdgeInsets.all(0),
+                                    decoration: BoxDecoration(
+                                        color:
+                                            Color.fromARGB(57, 107, 106, 106),
+                                        border: Border.all(
+                                          color: Colors.black,
+                                          width: 0.255 * widthMultiplier,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(40)),
+                                    child: Center(
+                                        child: Row(
+                                      children: [
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 6.0, bottom: 6.0, left: 6),
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(40),
+                                            ),
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(40),
+                                              child: Image.asset(
+                                                  'assets/download.jpg'),
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          '   StartInUp    ',
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 1.645 * textMultiplier),
+                                        ),
+                                      ],
+                                    )),
                                   ),
-                                );
-                              },
-                              child: Container(
-                                // width: 70,
-                                padding: EdgeInsets.all(0),
-                                decoration: BoxDecoration(
-                                    color: Color.fromARGB(57, 107, 106, 106),
-                                    border: Border.all(
-                                      color: Colors.black,
-                                      width: 0.255 * widthMultiplier,
-                                    ),
-                                    borderRadius: BorderRadius.circular(40)),
-                                child: Center(
-                                    child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 6.0, bottom: 6.0, left: 6),
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(40),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 0.588 * widthMultiplier,
+                                    vertical: 0.24 * heightMultiplier),
+                                child: InkWell(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(
+                                        builder: (context) => QuestionPage(),
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    // width: 70,
+                                    padding: EdgeInsets.all(0),
+                                    decoration: BoxDecoration(
+                                        color:
+                                            Color.fromARGB(57, 107, 106, 106),
+                                        border: Border.all(
+                                          color: Colors.black,
+                                          width: 0.255 * widthMultiplier,
                                         ),
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(40),
-                                          child: Image.asset(
-                                              'assets/download.jpg'),
-                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(40)),
+                                    child: Center(
+                                      child: Row(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                top: 6.0, bottom: 6.0, left: 6),
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(40),
+                                              ),
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(40),
+                                                child: Image.asset(
+                                                    'assets/BCCI_logo.png'),
+                                              ),
+                                            ),
+                                          ),
+                                          Text(
+                                            '   BCCI    ',
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontSize:
+                                                    1.645 * textMultiplier),
+                                          ),
+                                        ],
                                       ),
                                     ),
-                                    Text(
-                                      '   StartInUp    ',
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 1.645 * textMultiplier),
-                                    ),
-                                  ],
-                                )),
+                                  ),
+                                ),
                               ),
-                            ),
+                            ],
                           ),
                         ],
                       ),
