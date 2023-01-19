@@ -29,9 +29,15 @@ class _SuperTokenState extends State<SuperToken> {
     return Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.transparent,
           foregroundColor: Colors.black,
-          title: Text('SuperTokens'),
+          title: Text(
+            'SuperTokens',
+            style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.indigo.shade700,
+                fontSize: 20),
+          ),
         ),
         body: Column(
           children: [
